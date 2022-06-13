@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "967243439072",
+    "firebase_url": "https://meditari-9da15-default-rtdb.firebaseio.com",
+    "project_id": "meditari-9da15",
+    "storage_bucket": "meditari-9da15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967243439072:android:7115f3eb0a7b87c543e985",
+        "android_client_info": {
+          "package_name": "com.example.meditari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967243439072-7q4equs9bg5o511kueqm5pc1d0menphu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn19nJj6SbQC_3i8jriWQm3YBPyvMyyOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967243439072-7q4equs9bg5o511kueqm5pc1d0menphu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

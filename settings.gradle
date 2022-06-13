@@ -1,0 +1,2 @@
+rootProject.name = "Meditari"
+include ':app'

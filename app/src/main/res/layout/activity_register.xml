@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivities.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/registerscreen"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp"
+        android:id="@+id/profileImage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAMASTE"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"/>
+
+        <EditText
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:id="@+id/regName"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittextshape"/>
+
+        <EditText
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:id="@+id/regEmail"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittextshape"/>
+
+        <EditText
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:id="@+id/regPass"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittextshape"/>
+
+        <EditText
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:id="@+id/regConfirmPass"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittextshape"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signUpButton"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonshape"
+            android:text="SIGN UP"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="110dp"
+        android:text="Already have an account?"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_width="140dp"
+        android:id="@+id/signInText"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textAlignment="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="142dp"
+        android:text="SIGN IN"
+        android:textColor="#1D5288"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        tools:ignore="RtlCompat" />
+
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meditari">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Meditari">
+        <activity android:name=".FillerActivities.VoiceFiller"></activity>
+        <activity android:name=".FillerActivities.JournalFiller" />
+        <activity android:name=".FillerActivities.MoodFiller" />
+        <activity android:name=".FillerActivities.MeditationFiller" />
+        <activity android:name=".FillerActivities.InfoFiller" />
+        <activity
+            android:name=".Features.VoiceActivity"
+            android:label="@string/title_activity_voice"
+            android:theme="@style/Theme.Meditari.NoActionBar" />
+        <activity android:name=".Features.ProfileActivity" />
+        <activity android:name=".Features.MoodTracker" />
+        <activity android:name=".Features.MeditateActivity" />
+        <activity android:name=".Features.InfoActivity" />
+        <activity android:name=".IntroActivities.HomeActivity" />
+        <activity android:name=".Features.NoteActivity" />
+        <activity android:name=".Features.SoundsActivity" />
+        <activity android:name=".Articles.Article" />
+        <activity android:name=".IntroActivities.RegisterActivity" />
+        <activity
+            android:name=".IntroActivities.MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".IntroActivities.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IntroActivities.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

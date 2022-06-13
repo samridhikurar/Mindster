@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:id="@+id/aHeaderCard"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="#B0F3FB">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/articleImage"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/articleTitle"
+                            android:text="Title"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="bold"
+                            android:textSize="26sp"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/articleText"
+                    android:layout_below="@+id/aHeaderCard"
+                    android:layout_marginVertical="30dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/articleText"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="80dp">
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/aFooterImg"
+                        android:layout_gravity="left"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/registerscreen"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/aFooterImg"
+                        android:layout_marginStart="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="5dp"
+                            android:text="Did you enjoy reading this article?"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="5dp"
+                            android:text="We hope this article has taught you something useful!"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/aBackBtn"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="45dp"
+        android:elevation="3dp"
+        android:background="@drawable/back_btn_article"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>

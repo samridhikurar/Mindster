@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hello_robot"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="10dp"
+        android:rotation="180"/>
+
+    <TextView
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="12dp"
+        android:text="Gotcha!\nUpdate your profile here with some stylish avatars and pictures ;)"
+        android:textDirection="firstStrong"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/botdialog"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="left|top" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="50dp"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/done"
+                android:id="@+id/done"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="310dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
+                android:src="@drawable/registerscreen"
+                android:id="@+id/profileImage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileUsername"
+                android:inputType="textNoSuggestions"
+                android:layout_marginStart="10dp"
+                android:text="User"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email address"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="user123@gmail.com"
+                android:id="@+id/profileEmail"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="500dp"
+        app:cardCornerRadius="25dp"
+        android:id="@+id/notifsCardView"
+        app:cardBackgroundColor="#0D8F81"
+        android:elevation="50dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Notifications"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/notifs"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="200dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="550dp"
+        app:cardCornerRadius="25dp"
+        android:id="@+id/logoutCardView"
+        app:cardBackgroundColor="#700CC8"
+        android:elevation="50dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="80dp"
+            android:elevation="50dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/logout"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="155dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E3E3"
+    tools:context=".IntroActivities.MainActivity">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/backInfo"
+        android:src="@drawable/back_btn_article"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--Base CardView-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/base_cardview"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.473"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.021">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixed_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading"
+                            android:layout_width="270dp"
+                            android:layout_height="47dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="130dp"
+                            android:padding="10dp"
+                            android:text="What is PTSD?"
+                            android:textColor="#006600"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrow_button"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hidden_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixed_layout">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Some people develop post-traumatic stress disorder (PTSD) after
+experiencing a shocking, scary, or dangerous event.
+It is natural to feel afraid during and after a traumatic situation.
+Fear is a part of the body’s normal “fight-or-flight” response, which
+helps us avoid or respond to potential danger. People may
+experience a range of reactions after trauma, and most will recover
+from their symptoms over time. Those who continue to experience
+symptoms may be diagnosed with PTSD."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading2"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="Who develops PTSD?"
+                            android:textColor="#006600"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton2"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout2">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Anyone can develop PTSD at any age. This includes combat veterans as well as
+people who have experienced or witnessed a physical or sexual assault, abuse, an
+accident, a disaster, a terror attack, or other serious events. People who have PTSD
+may feel stressed or frightened, even when they are no longer in danger.\n\nNot everyone with PTSD has been through a dangerous event. In some cases,
+learning that a relative or close friend experienced trauma can cause PTSD.\n\nAccording to the National Center for PTSD, a program of the U.S. Department of
+Veterans Affairs, about seven or eight of every 100 people will experience PTSD in
+their lifetime. Women are more likely than men to develop PTSD. Certain aspects of
+the traumatic event and some biological factors (such as genes) may make some
+people more likely to develop PTSD."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading3"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:padding="10dp"
+                            android:text="What are the symptoms of PTSD?"
+                            android:textColor="#006600"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton3"
+
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout3">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Symptoms of PTSD usually begin within 3 months of the traumatic incident, but they
+sometimes emerge later. To meet the criteria for PTSD, symptoms must last longer
+than 1 month, and they must be severe enough to interfere with aspects of daily life,
+such as relationships or work. The symptoms also must be unrelated to medication,
+substance use, or other illness.\n\nThe course of the illness varies: Although some people recover within 6 months,
+others have symptoms that last for a year or longer. People with PTSD often have
+co-occurring conditions, such as depression, substance use, or one or more anxiety
+disorders.\n\nAfter a dangerous event, it is natural to have some symptoms or even to feel detached
+from the experience, as though you are observing things rather than experiencing
+them. A health care provider—such as a psychiatrist, psychologist, or clinical social
+worker—who has experience helping people with mental illnesses can determine
+whether symptoms meet the criteria for PTSD."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading4"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="How do children and teens react to trauma?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton4"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout4">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Children and teens can have extreme reactions to trauma, but their symptoms
+may not be the same as those seen in adults. In young children under the age
+of 6, symptoms can include:\n⊲ Wetting the bed after having learned to use the toilet\n⊲ Forgetting how or being unable to talk\n⊲ Acting out the scary event during playtime\n⊲ Being unusually clingy with a parent or other adult
+\n\nOlder children and teens usually show symptoms more like those seen in
+adults. They also may develop disruptive, disrespectful, or destructive
+behaviors. Older children and teens may feel guilty for not preventing injury or
+deaths. They also may have thoughts of revenge."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading5"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="Why do some people develop PTSD
+and other people do not?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton5"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading5"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout5">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Not everyone who lives through a dangerous event develops PTSD—many factors
+play a part. Some of these factors are present before the trauma; others become
+important during and after a traumatic event.
+\n\nRisk factors that may increase the likelihood of developing PTSD include:
+\n⊲ Exposure to dangerous events or traumas
+\n⊲ Getting hurt or seeing people hurt or killed
+\n⊲ Childhood trauma
+\n⊲ Feeling horror, helplessness, or extreme fear
+\n⊲ Having little or no social support after the event
+\n⊲ Dealing with extra stress after the event, such as loss of a loved one, pain and injury,
+or loss of a job or home
+\n⊲ Having a personal history or family history of mental illness or substance use
+\n\nResilience factors that may reduce the likelihood of developing PTSD include:
+\n⊲ Seeking out support from friends, family, or support groups
+\n⊲ Learning to feel okay with one’s actions in response to a traumatic event
+\n⊲ Having a coping strategy for getting through and learning from a traumatic event
+\n⊲ Being prepared and able to respond to upsetting events as they occur, despite
+feeling fear"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading6"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="How is PTSD treated?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton6"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading6"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout6">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="It is important for anyone with PTSD symptoms to work with a mental health
+professional who has experience treating PTSD. The main treatments are
+psychotherapy, medications, or both. An experienced mental health professional can
+help people find the treatment plan that meets their symptoms and needs.
+\n\nSome people with PTSD may be living through an ongoing trauma, such as being in an
+abusive relationship. In these cases, treatment is usually most effective when it
+addresses both the traumatic situation and the symptoms. People who have PTSD or
+who are exposed to trauma also may experience panic disorder, depression,
+substance use, or suicidal thoughts. Treatment for these conditions can help with
+recovery after trauma. Research shows that support from family and friends also can
+be an important part of recovery."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading7"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="What can I do to help myself?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton7"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout7">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="It is important to know that, although it may take some time, you can get better with
+treatment. Here are some things you can do to help yourself:
+\n⊲ Talk with your health care provider about treatment options, and follow your
+treatment plan.
+\n⊲ Engage in exercise, mindfulness, or other activities that help reduce stress.
+\n⊲ Try to maintain routines for meals, exercise, and sleep.
+\n⊲ Set realistic goals and do what you can as you are able.
+\n⊲ Spend time with trusted friends or relatives, and tell them about things that may
+trigger symptoms.
+\n⊲ Expect your symptoms to improve gradually, not immediately.
+\n⊲ Avoid use of alcohol or drugs."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView8"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading8"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="How can I help a friend or relative who has PTSD?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton8"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading8"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout8">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="If you know someone who may be experiencing PTSD, the most important thing you
+can do is to help that person get the right diagnosis and treatment. Some people may
+need help making an appointment with their health care provider; others may benefit
+from having someone accompany them to their health care visits.
+\n\nIf a close friend or relative is diagnosed with PTSD, you can encourage them to follow
+their treatment plan. If their symptoms do not get better after 6 to 8 weeks, you can
+encourage them to talk to their health care provider. You also can:
+\n⊲ Offer emotional support, understanding, patience, and encouragement.
+\n⊲ Learn about PTSD so you can understand what your friend is experiencing.
+\n⊲ Listen carefully. Pay attention to the person’s feelings and the situations that may
+trigger PTSD symptoms.
+\n⊲ Share positive distractions, such as walks, outings, and other activities."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView9"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading9"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="I sometimes feel anxious for no reason. What to do?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton9"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading9"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout9">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="Try these when you're feeling anxious or stressed:\n\n1. Take a time-out- Practice yoga, listen to music, meditate, get a massage, or learn relaxation techniques. Stepping back from the problem helps clear your head.\n2. Eat well-balanced meals\n3. Limit alcohol and caffeine\n4. Get enough sleep\n5. Exercise daily to help you feel good and maintain your health\n6. Take deep breaths. Inhale and exhale slowly.\n7. Count to 10 slowly. Repeat, and count to 20 if necessary.\n8. Do your best. Instead of aiming for perfection, which isn't possible, be proud of however close you get.\n9. Accept that you cannot control everything. Put your stress in perspective: Is it really as bad as you think?\n10. Welcome humor. A good laugh goes a long way."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView10"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading10"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="How to help someone having a panic attack?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton10"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading10"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout10">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="A panic attack is a sudden, intense episode of overwhelming fear and anxiety. There are several ways to help a person who is having a panic attack. These include:
+\n1. Remaining calm and making the person feel comfortable\n2.Making conversation and positive affirmations- Introducing yourself, asking them what day it is or finding out what makes them feel most comfortable.\n3.Grounding techniques like making them sit on a chair or counting from 1 to 10 or trying the 5-4-3-2-1 technique"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView11"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading11"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="What is the 5-4-3-2-1 technique?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton11"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading11"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout11">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:text="The 54321 grounding technique is an effective coping skill for anxiety and panic attacks by serving as an anchor for the present moment.\nAcknowledge FIVE things you see around you,\nFOUR things you can touch around you,\nTHREE things you hear,\nTWO things you can smell, and,\nONE thing you can taste."
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView12"
+                style="@style/Base.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/base_cardview"
+                app:layout_constraintTop_toTopOf="@id/base_cardview">
+
+                <!--This is a ConstraintLayout for the entire CardView
+                including the expandable portion-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+                    app:layout_constraintTop_toTopOf="@id/base_cardview"
+                    app:layout_constraintVertical_bias="0.511"
+                    tools:layout_editor_absoluteX="-55dp">
+
+                    <!--This is a ConstraintLayout for the fixed portion
+                of the CardView. The elements
+                that lie within the fixed portion of the CardView
+                can be constrained to this layout.-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fixedLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/heading12"
+                            android:layout_width="270dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="198dp"
+                            android:padding="10dp"
+                            android:text="Whom to reach out to in case of serious need?"
+                            android:textColor="#006600"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--This is ImageButton for the expansion icon.-->
+                        <ImageButton
+                            android:id="@+id/arrowbutton12"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="70dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            android:src="@drawable/plus"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/heading12"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--The following is the expandable portion whose
+                visibility is initially set to 'gone'.
+                The parent LinearLayout contains 3 child LinearLayouts
+                that hold a subject name and an icon each.-->
+                    <LinearLayout
+                        android:id="@+id/hiddenView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/fixedLayout12">
+
+                        <!--Child LinearLayout 1-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:id="@+id/textView12"
+                                android:textColor="#000000"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

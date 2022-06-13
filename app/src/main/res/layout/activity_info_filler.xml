@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillerActivities.InfoFiller">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/infoicon"></ImageView>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="&quot;In the absence of information, we\n jump to the worst conclusions.&quot;">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="EXPLORE NOW"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/card1"
+            android:id="@+id/yesInfoBtn"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Nope, LATER"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:background="@color/card4"
+            android:id="@+id/noInfoBtn"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/hello_robot"
+        android:rotation="-45"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="-50dp"
+        android:layout_marginBottom="40dp"
+        >
+
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botdialogfiller"
+        android:rotation="180"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="85dp"
+        android:layout_marginBottom="90dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12dp"
+        android:text="Dive into the Info section to gain complete knowledge on the mental health issues one might or might not be facing!"
+        android:textDirection="firstStrong"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="35dp"/>
+
+</FrameLayout>

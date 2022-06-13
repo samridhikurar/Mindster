@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:src="@drawable/moodtracker"></ImageView>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="&quot;A section to help you track your mood through all its ups and downs&quot;">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="125dp"
+            android:layout_height="35dp"
+            android:text="TRACK MOOD"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/card1"
+            android:id="@+id/yesMoodBtn"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Not in the mood"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:background="@color/card4"
+            android:id="@+id/noMoodBtn"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/mood_robot"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="40dp"
+        >
+
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botdialog"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="60dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:text="Even I'm not sure of my mood these days. Let's check"
+        android:textDirection="firstStrong"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="left|bottom"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="73dp"
+        android:layout_marginLeft="145dp"/>
+
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="-50dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/meditateicon"></ImageView>
+
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="&quot;To a mind that is still, the whole universe surrenders&quot;">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="DIVE IN"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:background="@color/card1"
+            android:id="@+id/yesMediBtn"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:text="Nope, LATER"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:background="@color/card4"
+            android:id="@+id/noMediBtn"></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/robot_sleepy"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="40dp"
+        >
+
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botdialog"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="70dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12dp"
+        android:text="Calm yourself by tuning into our meditation guides and relaxing sounds section"
+        android:textDirection="firstStrong"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="left|bottom"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="73dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="150dp"/>
+
+</FrameLayout>

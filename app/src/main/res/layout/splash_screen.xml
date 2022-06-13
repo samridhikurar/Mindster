@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-20dp"
+        android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logopng"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/appimg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MINDSTER"
+        android:id="@+id/apptext"
+        android:textColor="#1F309C"
+        android:layout_gravity="center"
+        android:textSize="40dp"
+        android:layout_marginTop="-35dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your very own mind buddy"
+        android:textColor="#8A9717"
+        android:layout_gravity="center"
+        android:layout_marginTop="-5dp"
+        android:textSize="18dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="@color/black"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>
