@@ -6,7 +6,6 @@ Mindster is a mental health wellness app, designed with an aim to provide an int
 <img src="https://user-images.githubusercontent.com/66664643/173538628-31167e42-257f-4402-8f40-c1f2caae54e0.png" alt="splash screen" width="200" height="400">
 
 ### TECH STACK:
-
 Java, Firebase, Alan AI
 
 
