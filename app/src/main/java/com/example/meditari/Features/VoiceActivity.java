@@ -23,7 +23,7 @@ public class VoiceActivity extends AppCompatActivity {
         AlanButton alanButton = findViewById(R.id.alan_button);
 
         AlanConfig alanConfig = AlanConfig.builder()
-                .setProjectId("a1a01b6d1f69655c598ae37c05fb062d2e956eca572e1d8b807a3e2338fdd0dc/stage")
+                .setProjectId("Your key here")
                 .build();
         alanButton.initWithConfig(alanConfig);
     }
